@@ -23,12 +23,12 @@ function initMap() {
   });
 
   function placeMarker(location) {
+    index++;
     let marker = new google.maps.Marker({
       position: location,
       map: map,
       label: labels[index % labels.length],
     });
-    index++;
     markers.push(marker);
   }
 
